@@ -1,0 +1,96 @@
+@use "reset";
+@use "colors" as *;
+
+body {
+  font-size: 1.3rem;
+  font-family: "Poppins", sans-serif;
+  background-color: $ltr-gray;
+}
+
+p {
+  color: $grayish-blue;
+}
+
+.container {
+  padding: 8.4rem 3.2rem;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 7.4rem;
+
+  &__title {
+    font-size: 2.4rem;
+    font-weight: 200;
+    color: $dkr-blue;
+    margin-bottom: 1.6rem;
+
+    & span {
+      font-weight: 600;
+      letter-spacing: 0.2px;
+    }
+  }
+
+  &__content {
+    font-size: 1.6rem;
+    letter-spacing: -0.4px;
+    line-height: 2.5rem;
+  }
+}
+
+.grid {
+  display: grid;
+  gap: 2.4rem;
+
+  &__card {
+    background-color: white;
+    border-radius: 0.6rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    height: 22rem;
+    padding: 3rem 2.8rem;
+    position: relative;
+
+    &__title {
+      font-size: 2rem;
+      font-weight: 600;
+      color: $dkr-blue;
+      margin-bottom: 0.5rem;
+    }
+
+    &__desc {
+      letter-spacing: 0.1px;
+    }
+
+    &__icon {
+      position: absolute;
+      right: 2.8rem;
+      bottom: 3rem;
+      height: 5.8rem;
+      width: 5.8rem;
+    }
+
+    &--cyan {
+      border-top: 3px solid $cyan;
+    }
+
+    &--red {
+      border-top: 3px solid $red;
+    }
+
+    &--orange {
+      border-top: 3px solid $orange;
+    }
+
+    &--blue {
+      border-top: 3px solid $blue;
+    }
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  a {
+    color: hsl(228, 45%, 44%);
+  }
+}
