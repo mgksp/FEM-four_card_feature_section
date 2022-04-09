@@ -84,6 +84,11 @@ p {
   padding: 3rem 2.8rem;
   position: relative;
 }
+@media only screen and (min-width: 940px) {
+  .grid__card {
+    height: 25rem;
+  }
+}
 .grid__card__title {
   font-size: 2rem;
   font-weight: 600;

@@ -72,6 +72,10 @@ p {
     padding: 3rem 2.8rem;
     position: relative;
 
+    @include breakpoint(first) {
+      height: 25rem;
+    }
+
     &__title {
       font-size: 2rem;
       font-weight: 600;
