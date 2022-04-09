@@ -1,10 +1,15 @@
 @use "reset";
 @use "colors" as *;
+@use "breakpoints" as *;
 
 body {
   font-size: 1.3rem;
   font-family: "Poppins", sans-serif;
   background-color: $ltr-gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 p {
@@ -12,12 +17,18 @@ p {
 }
 
 .container {
-  padding: 8.4rem 3.2rem;
+  padding-block: 8.4rem;
+  margin: 0 3.2rem;
+  max-width: 111rem;
 }
 
 .heading {
   text-align: center;
   margin-bottom: 7.4rem;
+
+  @include breakpoint(first) {
+    margin-bottom: 6.4rem;
+  }
 
   &__title {
     font-size: 2.4rem;
@@ -35,6 +46,8 @@ p {
     font-size: 1.6rem;
     letter-spacing: -0.4px;
     line-height: 2.5rem;
+    max-width: 55ch;
+    margin: 0 auto;
   }
 }
 
@@ -42,10 +55,15 @@ p {
   display: grid;
   gap: 2.4rem;
 
+  @include breakpoint(first) {
+    place-items: center;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
   &__card {
     background-color: white;
     border-radius: 0.6rem;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    box-shadow: 0px 18px 50px -10px lighten($color: $grayish-blue, $amount: 10%);
     height: 22rem;
     padding: 3rem 2.8rem;
     position: relative;
@@ -71,6 +89,10 @@ p {
 
     &--cyan {
       border-top: 3px solid $cyan;
+
+      @include breakpoint(first) {
+        grid-row: span 2;
+      }
     }
 
     &--red {
@@ -79,10 +101,19 @@ p {
 
     &--orange {
       border-top: 3px solid $orange;
+
+      @include breakpoint(first) {
+        grid-row-start: 2;
+        grid-column-start: 2;
+      }
     }
 
     &--blue {
       border-top: 3px solid $blue;
+
+      @include breakpoint(first) {
+        grid-row: span 2;
+      }
     }
   }
 }
