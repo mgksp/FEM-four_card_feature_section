@@ -97,6 +97,7 @@ p {
 }
 .grid__card__desc {
   letter-spacing: 0.1px;
+  line-height: 2.3rem;
 }
 .grid__card__icon {
   position: absolute;
