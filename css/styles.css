@@ -80,14 +80,8 @@ p {
   background-color: white;
   border-radius: 0.6rem;
   box-shadow: 0px 18px 50px -10px #bebfc5;
-  height: 22rem;
   padding: 3rem 2.8rem;
-  position: relative;
-}
-@media only screen and (min-width: 940px) {
-  .grid__card {
-    height: 25rem;
-  }
+  display: grid;
 }
 .grid__card__title {
   font-size: 2rem;
@@ -100,16 +94,16 @@ p {
   line-height: 2.3rem;
 }
 .grid__card__icon {
-  position: absolute;
-  right: 2.8rem;
-  bottom: 3rem;
   height: 5.8rem;
   width: 5.8rem;
+  justify-self: right;
+  margin-top: 3.2rem;
 }
 @media only screen and (min-width: 940px) {
   .grid__card__icon {
     height: 6.4rem;
     width: 6.4rem;
+    margin-top: 3.8rem;
   }
 }
 .grid__card--cyan {
@@ -144,7 +138,11 @@ p {
 .attribution {
   font-size: 11px;
   text-align: center;
+  color: hsl(234deg, 12%, 34%);
 }
 .attribution a {
-  color: hsl(228deg, 45%, 44%);
+  color: hsl(0deg, 78%, 62%);
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
 }
